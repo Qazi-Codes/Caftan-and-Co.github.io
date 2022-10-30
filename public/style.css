@@ -1,0 +1,110 @@
+:root {
+  --font-base: 'Cormorant Upright', serif;
+  --font-alt: 'Open Sans', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-base), sans-serif;
+    background: rgb(14, 14, 14);
+  }
+
+  .testdiv  {
+    z-index: 5;
+    color: goldenrod;
+    display: flex;
+    align-items: center;
+    
+    justify-content: center;
+    overflow: hidden;
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+  }
+  .test {
+    opacity: .7;
+  }
+  
+  .front-page {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    clip-path: circle(7%);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    
+  }
+  
+  .front-page video {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+  
+  .second-page {
+    height: 100vh;
+  }
+  
+  .blend {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0.6;
+  }
+  
+  #logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.1);
+    /* fill: transparent; */
+  }
+  
+  .intro-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--color-golden);
+    z-index: 4;
+    background-color:transparent;
+  }
+  
+  .title {
+    font-size: 5rem;
+    padding-bottom: 1rem;
+    background-color: transparent;
+  }
+  
+  .sub-title {
+    font-size: 1.5rem;
+    background-color: transparent;
+  }
+  
+  .second-page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+  .second-page h2 {
+    font-size: 6rem;
+  }
+  
+  .intro-logo {
+    position: absolute;
+    
+    width: 30%;
+    
+    z-index: 4;
+
+    background-color: transparent;
+  }
+  
