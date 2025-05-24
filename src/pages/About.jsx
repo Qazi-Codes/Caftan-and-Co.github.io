@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
+import { images } from '../constants';
 
 const fadeIn = {
   hidden: { opacity: 0, y: 20 },
@@ -106,16 +107,16 @@ const About = () => {
         >
           <h2 className="section-title">Our Designer</h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Meet Nadia Talimsani, the passionate lead designer behind Caftan & Co, dedicated to bringing Moroccan fashion to the world.
+            Meet Nadia Tlimsani, the passionate lead designer behind Caftan & Co, dedicated to bringing Moroccan fashion to the world.
           </p>
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-1 gap-8">
           {[
             {
-              name: 'Nadia Talimsani',
+              name: 'Nadia Tlimsani',
               role: 'Lead Designer',
-              image: '/src/assets/chef.png'
+              image: images.designer
             }
           ].map((member, index) => (
             <motion.div

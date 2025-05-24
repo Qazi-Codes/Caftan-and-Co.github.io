@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { useInView } from 'react-intersection-observer';
+import HeroCarousel3DCylinder from '../components/HeroCarousel3DCylinder';
 
 const fadeIn = {
   hidden: { opacity: 0, y: 20 },
@@ -50,31 +51,8 @@ const Home = () => {
 
   return (
     <div className="space-y-20">
-      {/* Hero Section */}
-      <section className="relative h-screen flex items-center justify-center bg-cover bg-center" 
-               style={{ backgroundImage: "url('/images/hero-bg.jpg')" }}>
-        <div className="absolute inset-0 bg-black/40" />
-        <video
-          autoPlay
-          loop
-          muted
-          className="absolute inset-0 w-full h-full object-cover"
-        >
-          <source src="/src/assets/sign.mp4" type="video/mp4" />
-        </video>
-        <motion.div 
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="relative z-10 text-center text-white"
-        >
-          <h1 className="text-5xl md:text-7xl font-serif mb-6">Caftan & Co</h1>
-          <p className="text-xl md:text-2xl mb-8">Discover the Elegance of Moroccan Fashion</p>
-          <Link to="/collection" className="btn-primary">
-            Explore Collection
-          </Link>
-        </motion.div>
-      </section>
+      {/* Hero Cylinder Carousel */}
+      <HeroCarousel3DCylinder />
 
       {/* Featured Collections */}
       <section className="container py-16">

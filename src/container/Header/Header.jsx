@@ -13,8 +13,16 @@ const Header = () => (
     </div>
 
     <div className='app__wrapper_img'>
-      <img src={images.welcome} alt="header img" />
-
+      <video 
+        autoPlay 
+        loop 
+        muted 
+        playsInline
+        className="signature-video"
+      >
+        <source src={require('../../assets/hero.mp4')} type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
     </div>
   </div>
 );

@@ -1,9 +1,9 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { useInView } from 'react-intersection-observer';
 import { FaTimes, FaSortAmountDown, FaSortAmountUp } from 'react-icons/fa';
 import Modal from '../components/Modal';
 import MagnifiedImage from '../components/MagnifiedImage';
+import { images } from '../constants';
 
 const fadeIn = {
   hidden: { opacity: 0, y: 20 },
@@ -14,10 +14,6 @@ const Collection = () => {
   const [activeCategory, setActiveCategory] = useState('all');
   const [selectedProduct, setSelectedProduct] = useState(null);
   const [sortOrder, setSortOrder] = useState('asc');
-  const [ref, inView] = useInView({
-    triggerOnce: true,
-    threshold: 0.1
-  });
 
   const categories = [
     { id: 'all', name: 'All Collections' },
@@ -42,7 +38,7 @@ const Collection = () => {
       name: 'Royal Emerald Caftan',
       category: 'caftan',
       price: '5,500 MAD',
-      image: '/src/assets/caftan/c (1).jpeg',
+      image: images.c1,
       description: 'Elegant royal caftan with intricate embroidery',
       details: 'Handcrafted in Fes, this emerald green caftan features traditional Moroccan embroidery with gold thread. Perfect for special occasions and celebrations.'
     },
@@ -51,7 +47,7 @@ const Collection = () => {
       name: 'Sapphire Silk Caftan',
       category: 'caftan',
       price: '4,500 MAD',
-      image: '/src/assets/caftan/c (2).jpeg',
+      image: images.c2,
       description: 'Luxurious silk caftan with modern design',
       details: 'Crafted from premium silk, this sapphire blue caftan combines traditional patterns with contemporary styling. Ideal for formal events.'
     },
@@ -60,7 +56,7 @@ const Collection = () => {
       name: 'Golden Thread Caftan',
       category: 'caftan',
       price: '5,800 MAD',
-      image: '/src/assets/caftan/c (3).jpeg',
+      image: images.c3,
       description: 'Opulent caftan with golden threadwork',
       details: 'A masterpiece of Moroccan craftsmanship, featuring intricate golden thread embroidery on rich fabric. Perfect for royal celebrations.'
     },
@@ -69,7 +65,7 @@ const Collection = () => {
       name: 'Floral Dream Caftan',
       category: 'caftan',
       price: '3,500 MAD',
-      image: '/src/assets/caftan/c (4).jpeg',
+      image: images.c4,
       description: 'Delicate floral pattern caftan',
       details: 'Light and airy design with beautiful floral motifs, perfect for spring celebrations and garden parties.'
     },
@@ -78,7 +74,7 @@ const Collection = () => {
       name: 'Crystal Evening Caftan',
       category: 'caftan',
       price: '4,800 MAD',
-      image: '/src/assets/caftan/c (5).jpeg',
+      image: images.c5,
       description: 'Sparkling evening caftan with crystal details',
       details: 'Elegant evening wear featuring crystal embellishments and flowing silhouette. Perfect for formal gatherings.'
     },
@@ -87,7 +83,7 @@ const Collection = () => {
       name: 'Desert Rose Caftan',
       category: 'caftan',
       price: '3,800 MAD',
-      image: '/src/assets/caftan/c (6).jpeg',
+      image: images.c6,
       description: 'Warm-toned caftan inspired by desert roses',
       details: 'Inspired by the beauty of desert roses, this caftan features warm tones and intricate patterns.'
     },
@@ -96,7 +92,7 @@ const Collection = () => {
       name: 'Ocean Breeze Caftan',
       category: 'caftan',
       price: '4,200 MAD',
-      image: '/src/assets/caftan/c (7).jpeg',
+      image: images.c7,
       description: 'Cool blue caftan with wave-like patterns',
       details: 'Refreshing design inspired by ocean waves, perfect for summer celebrations.'
     },
@@ -105,7 +101,7 @@ const Collection = () => {
       name: 'Royal Purple Caftan',
       category: 'caftan',
       price: '5,200 MAD',
-      image: '/src/assets/caftan/c (8).jpeg',
+      image: images.c8,
       description: 'Regal purple caftan with gold accents',
       details: 'A majestic design featuring rich purple fabric and gold embellishments.'
     },
@@ -114,7 +110,7 @@ const Collection = () => {
       name: 'Spring Garden Caftan',
       category: 'caftan',
       price: '3,200 MAD',
-      image: '/src/assets/caftan/c (9).jpeg',
+      image: images.c9,
       description: 'Vibrant spring-inspired caftan',
       details: 'Celebrate spring with this colorful design featuring garden-inspired patterns.'
     },
@@ -123,7 +119,7 @@ const Collection = () => {
       name: 'Moonlight Caftan',
       category: 'caftan',
       price: '4,600 MAD',
-      image: '/src/assets/caftan/c (10).jpeg',
+      image: images.c10,
       description: 'Elegant silver-toned evening caftan',
       details: 'Inspired by moonlight, this caftan features shimmering silver details.'
     },
@@ -132,7 +128,7 @@ const Collection = () => {
       name: 'Sunset Glow Caftan',
       category: 'caftan',
       price: '4,300 MAD',
-      image: '/src/assets/caftan/c (11).jpeg',
+      image: images.c11,
       description: 'Warm sunset-colored caftan',
       details: 'Captures the beauty of Moroccan sunsets with warm, glowing colors.'
     },
@@ -141,7 +137,7 @@ const Collection = () => {
       name: 'Royal Gold Caftan',
       category: 'caftan',
       price: '5,600 MAD',
-      image: '/src/assets/caftan/c (12).jpeg',
+      image: images.c12,
       description: 'Luxurious gold-embellished caftan',
       details: 'A royal design featuring gold embroidery and luxurious fabric.'
     },
@@ -150,7 +146,7 @@ const Collection = () => {
       name: 'Desert Night Caftan',
       category: 'caftan',
       price: '3,900 MAD',
-      image: '/src/assets/caftan/c (13).jpeg',
+      image: images.c13,
       description: 'Deep blue caftan inspired by desert nights',
       details: 'Inspired by the starry desert nights, featuring deep blue tones.'
     },
@@ -159,7 +155,7 @@ const Collection = () => {
       name: 'Morning Dew Caftan',
       category: 'caftan',
       price: '3,400 MAD',
-      image: '/src/assets/caftan/c (14).jpeg',
+      image: images.c14,
       description: 'Fresh and light morning-inspired caftan',
       details: 'Light and refreshing design perfect for morning celebrations.'
     },
@@ -168,7 +164,7 @@ const Collection = () => {
       name: 'Royal Ruby Caftan',
       category: 'caftan',
       price: '5,300 MAD',
-      image: '/src/assets/caftan/c (15).jpeg',
+      image: images.c15,
       description: 'Rich red caftan with royal details',
       details: 'A stunning ruby-red design with royal embellishments.'
     },
@@ -177,7 +173,7 @@ const Collection = () => {
       name: 'Desert Wind Caftan',
       category: 'caftan',
       price: '3,700 MAD',
-      image: '/src/assets/caftan/c (16).jpeg',
+      image: images.c16,
       description: 'Flowing design inspired by desert winds',
       details: 'Features flowing patterns inspired by desert winds.'
     },
@@ -186,7 +182,7 @@ const Collection = () => {
       name: 'Royal Sapphire Caftan',
       category: 'caftan',
       price: '5,400 MAD',
-      image: '/src/assets/caftan/c (17).jpeg',
+      image: images.c17,
       description: 'Deep blue royal caftan',
       details: 'A majestic sapphire design with royal details.'
     },
@@ -195,7 +191,7 @@ const Collection = () => {
       name: 'Desert Flower Caftan',
       category: 'caftan',
       price: '3,600 MAD',
-      image: '/src/assets/caftan/c (18).jpeg',
+      image: images.c18,
       description: 'Floral-inspired desert caftan',
       details: 'Features desert flower patterns and warm tones.'
     },
@@ -204,7 +200,7 @@ const Collection = () => {
       name: 'Royal Pearl Caftan',
       category: 'caftan',
       price: '4,900 MAD',
-      image: '/src/assets/caftan/c (19).jpeg',
+      image: images.c19,
       description: 'Pearl-embellished royal caftan',
       details: 'Elegant design with pearl embellishments.'
     },
@@ -213,7 +209,7 @@ const Collection = () => {
       name: 'Desert Sun Caftan',
       category: 'caftan',
       price: '4,100 MAD',
-      image: '/src/assets/caftan/c (20).jpeg',
+      image: images.c20,
       description: 'Warm desert-inspired caftan',
       details: 'Features warm desert-inspired patterns.'
     },
@@ -222,7 +218,7 @@ const Collection = () => {
       name: 'Royal Diamond Caftan',
       category: 'caftan',
       price: '5,700 MAD',
-      image: '/src/assets/caftan/c (21).jpeg',
+      image: images.c21,
       description: 'Sparkling diamond-inspired caftan',
       details: 'Features sparkling details inspired by diamonds.'
     },
@@ -231,7 +227,7 @@ const Collection = () => {
       name: 'Desert Moon Caftan',
       category: 'caftan',
       price: '4,400 MAD',
-      image: '/src/assets/caftan/c (22).jpeg',
+      image: images.c22,
       description: 'Moonlight-inspired desert caftan',
       details: 'Features patterns inspired by moonlight on desert sands.'
     },
@@ -240,7 +236,7 @@ const Collection = () => {
       name: 'Royal Topaz Caftan',
       category: 'caftan',
       price: '5,100 MAD',
-      image: '/src/assets/caftan/c (23).jpeg',
+      image: images.c23,
       description: 'Golden topaz-inspired caftan',
       details: 'Features golden topaz-inspired patterns.'
     },
@@ -249,7 +245,7 @@ const Collection = () => {
       name: 'Desert Star Caftan',
       category: 'caftan',
       price: '3,800 MAD',
-      image: '/src/assets/caftan/c (24).jpeg',
+      image: images.c24,
       description: 'Star-patterned desert caftan',
       details: 'Features star patterns inspired by desert nights.'
     },
@@ -258,7 +254,7 @@ const Collection = () => {
       name: 'Royal Amethyst Caftan',
       category: 'caftan',
       price: '5,200 MAD',
-      image: '/src/assets/caftan/c (25).jpeg',
+      image: images.c25,
       description: 'Purple amethyst-inspired caftan',
       details: 'Features rich purple patterns inspired by amethyst.'
     },
@@ -267,7 +263,7 @@ const Collection = () => {
       name: 'Desert Dawn Caftan',
       category: 'caftan',
       price: '3,500 MAD',
-      image: '/src/assets/caftan/c (26).jpeg',
+      image: images.c26,
       description: 'Dawn-inspired desert caftan',
       details: 'Features patterns inspired by desert dawn.'
     },
@@ -276,7 +272,7 @@ const Collection = () => {
       name: 'Royal Garnet Caftan',
       category: 'caftan',
       price: '4,700 MAD',
-      image: '/src/assets/caftan/c (27).jpeg',
+      image: images.c27,
       description: 'Deep red garnet-inspired caftan',
       details: 'Features rich red patterns inspired by garnet.'
     },
@@ -285,7 +281,7 @@ const Collection = () => {
       name: 'Desert Mirage Caftan',
       category: 'caftan',
       price: '4,200 MAD',
-      image: '/src/assets/caftan/c (28).jpeg',
+      image: images.c28,
       description: 'Mirage-inspired desert caftan',
       details: 'Features patterns inspired by desert mirages.'
     },
@@ -294,7 +290,7 @@ const Collection = () => {
       name: 'Royal Opal Caftan',
       category: 'caftan',
       price: '5,900 MAD',
-      image: '/src/assets/caftan/c (29).jpeg',
+      image: images.c29,
       description: 'Opalescent royal caftan',
       details: 'Features shimmering patterns inspired by opal.'
     },
@@ -305,7 +301,7 @@ const Collection = () => {
       name: 'Classic White Gandoura',
       category: 'gandoura',
       price: '3,200 MAD',
-      image: '/src/assets/gandoura/g (1).jpeg',
+      image: images.g1,
       description: 'Traditional white gandoura with elegant embroidery',
       details: 'A timeless white gandoura featuring delicate embroidery patterns. Perfect for daily wear and special occasions.'
     },
@@ -314,7 +310,7 @@ const Collection = () => {
       name: 'Royal Blue Gandoura',
       category: 'gandoura',
       price: '3,500 MAD',
-      image: '/src/assets/gandoura/g (2).jpeg',
+      image: images.g2,
       description: 'Rich blue gandoura with gold accents',
       details: 'A stunning blue gandoura adorned with gold thread embroidery. Ideal for formal gatherings.'
     },
@@ -323,7 +319,7 @@ const Collection = () => {
       name: 'Emerald Green Gandoura',
       category: 'gandoura',
       price: '3,800 MAD',
-      image: '/src/assets/gandoura/g (3).jpeg',
+      image: images.g3,
       description: 'Vibrant green gandoura with intricate patterns',
       details: 'A beautiful emerald green gandoura featuring traditional Moroccan patterns.'
     },
@@ -332,7 +328,7 @@ const Collection = () => {
       name: 'Desert Rose Gandoura',
       category: 'gandoura',
       price: '3,400 MAD',
-      image: '/src/assets/gandoura/g (4).jpeg',
+      image: images.g4,
       description: 'Warm-toned gandoura with floral motifs',
       details: 'A warm-toned gandoura inspired by desert roses, perfect for everyday elegance.'
     },
@@ -341,7 +337,7 @@ const Collection = () => {
       name: 'Golden Thread Gandoura',
       category: 'gandoura',
       price: '4,200 MAD',
-      image: '/src/assets/gandoura/g (5).jpeg',
+      image: images.g5,
       description: 'Luxurious gandoura with golden embroidery',
       details: 'An exquisite gandoura featuring intricate golden thread work and premium fabric.'
     },
@@ -350,7 +346,7 @@ const Collection = () => {
       name: 'Royal Purple Gandoura',
       category: 'gandoura',
       price: '3,900 MAD',
-      image: '/src/assets/gandoura/g (6).jpeg',
+      image: images.g6,
       description: 'Regal purple gandoura with silver details',
       details: 'A majestic purple gandoura with silver embellishments and traditional patterns.'
     },
@@ -359,7 +355,7 @@ const Collection = () => {
       name: 'Sapphire Blue Gandoura',
       category: 'gandoura',
       price: '4,000 MAD',
-      image: '/src/assets/gandoura/g (7).jpeg',
+      image: images.g7,
       description: 'Deep blue gandoura with crystal accents',
       details: 'A sophisticated sapphire blue gandoura featuring crystal embellishments.'
     },
@@ -370,7 +366,7 @@ const Collection = () => {
       name: 'Classic Black Djellaba',
       category: 'djellaba',
       price: '3,300 MAD',
-      image: '/src/assets/djellaba/d (1).jpeg',
+      image: images.d1,
       description: 'Traditional black djellaba with elegant details',
       details: 'A timeless black djellaba perfect for daily wear and special occasions.'
     },
@@ -379,7 +375,7 @@ const Collection = () => {
       name: 'Royal Blue Djellaba',
       category: 'djellaba',
       price: '3,600 MAD',
-      image: '/src/assets/djellaba/d (2).jpeg',
+      image: images.d2,
       description: 'Rich blue djellaba with gold embroidery',
       details: 'A stunning blue djellaba adorned with gold thread work.'
     },
@@ -388,7 +384,7 @@ const Collection = () => {
       name: 'Emerald Green Djellaba',
       category: 'djellaba',
       price: '3,800 MAD',
-      image: '/src/assets/djellaba/d (3).jpeg',
+      image: images.d3,
       description: 'Vibrant green djellaba with traditional patterns',
       details: 'A beautiful emerald green djellaba featuring classic Moroccan designs.'
     },
@@ -397,7 +393,7 @@ const Collection = () => {
       name: 'Desert Sand Djellaba',
       category: 'djellaba',
       price: '3,400 MAD',
-      image: '/src/assets/djellaba/d (4).jpeg',
+      image: images.d4,
       description: 'Warm-toned djellaba with intricate embroidery',
       details: 'A warm-toned djellaba inspired by desert sands, perfect for everyday wear.'
     },
@@ -406,7 +402,7 @@ const Collection = () => {
       name: 'Golden Thread Djellaba',
       category: 'djellaba',
       price: '4,200 MAD',
-      image: '/src/assets/djellaba/d (5).jpeg',
+      image: images.d5,
       description: 'Luxurious djellaba with golden details',
       details: 'An exquisite djellaba featuring intricate golden thread work.'
     },
@@ -415,7 +411,7 @@ const Collection = () => {
       name: 'Royal Purple Djellaba',
       category: 'djellaba',
       price: '3,900 MAD',
-      image: '/src/assets/djellaba/d (6).jpeg',
+      image: images.d6,
       description: 'Regal purple djellaba with silver accents',
       details: 'A majestic purple djellaba with silver embellishments.'
     },
@@ -424,7 +420,7 @@ const Collection = () => {
       name: 'Sapphire Blue Djellaba',
       category: 'djellaba',
       price: '4,000 MAD',
-      image: '/src/assets/djellaba/d (7).jpeg',
+      image: images.d7,
       description: 'Deep blue djellaba with crystal details',
       details: 'A sophisticated sapphire blue djellaba featuring crystal embellishments.'
     },
@@ -433,7 +429,7 @@ const Collection = () => {
       name: 'Desert Rose Djellaba',
       category: 'djellaba',
       price: '3,700 MAD',
-      image: '/src/assets/djellaba/d (8).jpeg',
+      image: images.d8,
       description: 'Warm-toned djellaba with floral patterns',
       details: 'A beautiful djellaba inspired by desert roses.'
     },
@@ -442,7 +438,7 @@ const Collection = () => {
       name: 'Royal Gold Djellaba',
       category: 'djellaba',
       price: '4,500 MAD',
-      image: '/src/assets/djellaba/d (9).jpeg',
+      image: images.d9,
       description: 'Luxurious gold-embellished djellaba',
       details: 'A royal design featuring gold embroidery and premium fabric.'
     },
@@ -451,7 +447,7 @@ const Collection = () => {
       name: 'Emerald Evening Djellaba',
       category: 'djellaba',
       price: '4,100 MAD',
-      image: '/src/assets/djellaba/d (10).jpeg',
+      image: images.d10,
       description: 'Elegant emerald djellaba for evening wear',
       details: 'A sophisticated emerald djellaba perfect for evening events.'
     },
@@ -460,7 +456,7 @@ const Collection = () => {
       name: 'Desert Night Djellaba',
       category: 'djellaba',
       price: '3,800 MAD',
-      image: '/src/assets/djellaba/d (11).jpeg',
+      image: images.d11,
       description: 'Deep blue djellaba inspired by desert nights',
       details: 'A stunning design inspired by starry desert nights.'
     },
@@ -469,7 +465,7 @@ const Collection = () => {
       name: 'Royal Sapphire Djellaba',
       category: 'djellaba',
       price: '4,300 MAD',
-      image: '/src/assets/djellaba/d (12).jpeg',
+      image: images.d12,
       description: 'Majestic sapphire djellaba with royal details',
       details: 'A royal design featuring sapphire blue fabric and gold embellishments.'
     },
@@ -478,7 +474,7 @@ const Collection = () => {
       name: 'Desert Dawn Djellaba',
       category: 'djellaba',
       price: '3,600 MAD',
-      image: '/src/assets/djellaba/d (13).jpeg',
+      image: images.d13,
       description: 'Warm-toned djellaba inspired by desert dawn',
       details: 'A beautiful design featuring warm desert-inspired patterns.'
     },
@@ -489,7 +485,7 @@ const Collection = () => {
       name: 'Traditional Moroccan Belt',
       category: 'accessories',
       price: '1,200 MAD',
-      image: '/src/assets/accesories/ac (1).jpeg',
+      image: images.ac1,
       description: 'Handcrafted leather belt with traditional patterns',
       details: 'A beautiful leather belt featuring traditional Moroccan embroidery and patterns.'
     },
@@ -498,7 +494,7 @@ const Collection = () => {
       name: 'Gold Embroidered Scarf',
       category: 'accessories',
       price: '1,500 MAD',
-      image: '/src/assets/accesories/ac (2).jpeg',
+      image: images.ac2,
       description: 'Luxurious scarf with gold thread work',
       details: 'An elegant scarf adorned with gold thread embroidery.'
     },
@@ -507,7 +503,7 @@ const Collection = () => {
       name: 'Silver Jewelry Set',
       category: 'accessories',
       price: '2,800 MAD',
-      image: '/src/assets/accesories/ac (3).jpeg',
+      image: images.ac3,
       description: 'Traditional silver jewelry set',
       details: 'A complete set of traditional Moroccan silver jewelry.'
     },
@@ -516,7 +512,7 @@ const Collection = () => {
       name: 'Embroidered Handbag',
       category: 'accessories',
       price: '1,800 MAD',
-      image: '/src/assets/accesories/ac (4).jpeg',
+      image: images.ac4,
       description: 'Handcrafted bag with traditional embroidery',
       details: 'A beautiful handbag featuring traditional Moroccan embroidery.'
     },
@@ -525,7 +521,7 @@ const Collection = () => {
       name: 'Gold Thread Headpiece',
       category: 'accessories',
       price: '2,200 MAD',
-      image: '/src/assets/accesories/ac (5).jpeg',
+      image: images.ac5,
       description: 'Elegant headpiece with gold details',
       details: 'A stunning headpiece adorned with gold thread work.'
     },
@@ -534,7 +530,7 @@ const Collection = () => {
       name: 'Traditional Footwear',
       category: 'accessories',
       price: '1,600 MAD',
-      image: '/src/assets/accesories/ac (6).jpeg',
+      image: images.ac6,
       description: 'Handcrafted traditional Moroccan shoes',
       details: 'Beautifully crafted traditional Moroccan footwear.'
     },
@@ -543,7 +539,7 @@ const Collection = () => {
       name: 'Silver Belt Buckle',
       category: 'accessories',
       price: '1,400 MAD',
-      image: '/src/assets/accesories/ac (7).jpeg',
+      image: images.ac7,
       description: 'Intricately designed silver buckle',
       details: 'A handcrafted silver belt buckle with traditional patterns.'
     },
@@ -552,7 +548,7 @@ const Collection = () => {
       name: 'Gold Embroidered Clutch',
       category: 'accessories',
       price: '2,000 MAD',
-      image: '/src/assets/accesories/ac (8).jpeg',
+      image: images.ac8,
       description: 'Elegant clutch with gold embroidery',
       details: 'A sophisticated clutch featuring gold thread embroidery.'
     },
@@ -561,7 +557,7 @@ const Collection = () => {
       name: 'Traditional Necklace',
       category: 'accessories',
       price: '1,900 MAD',
-      image: '/src/assets/accesories/ac (9).jpeg',
+      image: images.ac9,
       description: 'Handcrafted traditional necklace',
       details: 'A beautiful traditional Moroccan necklace.'
     },
@@ -570,7 +566,7 @@ const Collection = () => {
       name: 'Embroidered Shawl',
       category: 'accessories',
       price: '1,700 MAD',
-      image: '/src/assets/accesories/ac (10).jpeg',
+      image: images.ac10,
       description: 'Traditional shawl with intricate embroidery',
       details: 'A luxurious shawl featuring traditional Moroccan embroidery.'
     }
@@ -596,8 +592,8 @@ const Collection = () => {
   return (
     <div className="pt-20">
       {/* Hero Section */}
-      <section className="relative h-[40vh] flex items-center justify-center bg-cover bg-center" 
-               style={{ backgroundImage: "url('/src/assets/gallery01.png')" }}>
+      <section className="relative h-[40vh] flex items-center justify-center bg-cover bg-center"
+               style={{ backgroundImage: `url(${images.design})` }}>
         <div className="absolute inset-0 bg-black/40" />
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
@@ -671,9 +667,8 @@ const Collection = () => {
       {/* Products Grid */}
       <section className="container py-16">
         <motion.div
-          ref={ref}
           initial="hidden"
-          animate={inView ? "visible" : "hidden"}
+          animate="visible"
           variants={fadeIn}
           transition={{ duration: 0.6 }}
           className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8"
@@ -682,7 +677,7 @@ const Collection = () => {
             <motion.div
               key={product.id}
               initial="hidden"
-              animate={inView ? "visible" : "hidden"}
+              animate="visible"
               variants={fadeIn}
               transition={{ duration: 0.6, delay: index * 0.1 }}
               className="card group"
@@ -757,7 +752,7 @@ const Collection = () => {
         <div className="container">
           <motion.div
             initial="hidden"
-            animate={inView ? "visible" : "hidden"}
+            animate="visible"
             variants={fadeIn}
             transition={{ duration: 0.6 }}
             className="grid grid-cols-1 md:grid-cols-3 gap-8"
@@ -779,7 +774,7 @@ const Collection = () => {
               <motion.div
                 key={feature.title}
                 initial="hidden"
-                animate={inView ? "visible" : "hidden"}
+                animate="visible"
                 variants={fadeIn}
                 transition={{ duration: 0.6, delay: index * 0.2 }}
                 className="text-center"
