@@ -1,0 +1,145 @@
+.app__djellaba {
+    display: flex;
+    flex-direction: row;
+    background: var(--color-black);
+    
+}
+
+.app__djellaba-content {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+
+    max-width: 90%;
+    padding-right: 2rem;
+}
+
+.app__djellaba-content button {
+    margin-top: 1rem;
+}
+
+.app__djellaba-images {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    max-width: 50%;
+    position: relative;
+    
+}
+
+.app__djellaba-images_container {
+    display: flex;
+    flex-direction: row;
+    width: max-content;
+    overflow: scroll;
+    background: var(--color-black);
+
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    transform-style: preserve-3d;
+}
+
+.app__djellaba-images_container::-webkit-scrollbar{
+    display: none;
+}
+
+
+.app__djellaba-images_card {
+    position: relative;
+    min-width: 301px;
+    height: 447px;
+    margin-right: 2rem;
+    
+    transform-style: preserve-3d;
+}
+
+
+
+.app__djellaba-images_card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 1;
+    transition: .5s ease;
+    background: var(--color-golden)
+}
+
+.app__djellaba-images_card:hover img {
+    opacity:0.8;
+}
+
+.app__djellaba-images_card:hover .djellaba__image-icon {
+    opacity: 1;
+}
+
+.app__djellaba-images_arrows {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+
+    position: absolute;
+    bottom: 5%;
+    background: transparent;
+
+}
+
+.djellaba__arrow-icon {
+    color: var(--color-golden);
+    font-size: 2rem;
+    cursor: pointer;
+    background-color: var(--color-black);
+    border-radius: 5px;
+
+}
+
+.djellaba__arrow-icon:hover {
+    color: white;
+}
+
+@media screen and (min-width: 2000px)  {
+    .app__djellaba-content {
+        min-width: 100%;
+        padding-right: 4rem;
+    }
+
+    .app__djellaba-images_card {
+        min-width: 400px;
+        height: 550px;
+    }
+}
+
+@media screen and (max-width: 1150px)  {
+    .app__djellaba {
+        flex-direction: column;
+    }
+    
+    .app__djellaba-images {
+        min-width: 100%;
+        margin: 5rem 0;   
+    }
+}
+
+@media screen and (max-width: 850px)  {
+    .app__djellaba {
+        padding: 4rem 0 4rem 4rem;
+    }
+}
+
+@media screen and (max-width: 650px)  {
+    .app__djellaba {
+        padding: 4rem 0 4rem 2rem;
+    }
+
+    .app__djellaba-content {
+        min-width: 100%;
+    }
+
+    .app__djellaba-images_card {
+        min-width: 240px;
+        height: 320px;
+    }
+}
